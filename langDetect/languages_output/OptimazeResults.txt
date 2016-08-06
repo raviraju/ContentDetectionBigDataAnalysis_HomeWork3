@@ -1,0 +1,29 @@
+Examining: [/home/ravirajukrishna/HW3/langDetect/languages/rus.pdf]
+The MIME type (based on filename) is: [application/pdf]
+The MIME type (based on MAGIC) is: [application/pdf]
+The MIME type (based on the Detector interface) is: [application/pdf]
+The language of this content is: [th]
+
+Examining: [/home/ravirajukrishna/HW3/langDetect/languages/frn.pdf]
+The MIME type (based on filename) is: [application/pdf]
+The MIME type (based on MAGIC) is: [application/pdf]
+The MIME type (based on the Detector interface) is: [application/pdf]
+The language of this content is: [th]
+
+
+Examining: [/home/ravirajukrishna/HW3/langDetect/languages/spn.pdf]
+The MIME type (based on filename) is: [application/pdf]
+The MIME type (based on MAGIC) is: [application/pdf]
+The MIME type (based on the Detector interface) is: [application/pdf]
+The language of this content is: [th]
+
+Examining: [/home/ravirajukrishna/HW3/langDetect/languages/eng.pdf]
+The MIME type (based on filename) is: [application/pdf]
+The MIME type (based on MAGIC) is: [application/pdf]
+The MIME type (based on the Detector interface) is: [application/pdf]
+The language of this content is: [en]
+
+LanguageDetector langDetector = new OptimaizeLangDetector().loadModels();
+LanguageResult lang = langDetector.detect(FileUtils.readFileToString(new File(filename), UTF_8));
+
+System.out.println("The language of this content is: ["	+ lang.getLanguage() + "]");
